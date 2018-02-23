@@ -1,13 +1,13 @@
 #define MaxSize 50
 typedef struct{
     ElemType data[MaxSize];
-	  int length;
+    int length;
 }SqList;
 
 #define InitSize 50
 typedef struct{
     ElemType *data;
-	  int MaxSize,length;
+    int MaxSize,length;
 }SqList;
 
 L.data = (ElemType*)malloc(sizeof(ElemType)*InitSize); 
