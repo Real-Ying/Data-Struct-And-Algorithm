@@ -66,3 +66,13 @@ void LocateElem(SqList L,ElemType e){
      else
 	    return false;
 }
+
+//逆置：复杂度O(1)
+void Reserse(SqList &L){
+     ElemType temp;
+     for(int i=0;i<L.length/2;i++){
+	temp=L.data[i];    
+	L.data[i]=L.data[L.length-1-i];   
+	L.data[L.length-1-i]=temp;    
+	}		
+}
