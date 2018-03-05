@@ -57,3 +57,12 @@ void Del_x_2(SqList &L,ElemType x){
 	}
 	L.length=L.length-k;
 }
+
+//按值查找,返回位序
+void LocateElem(SqList L,ElemType e){
+     for(int i=0;i<L.length;i++)
+	 if(L.data[i]==e)
+	    return i-1;
+     else
+	    return false;
+}
