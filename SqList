@@ -94,5 +94,21 @@ Reserse(A,0,n-1,n);
 Reserse(A,n,n+m-1,m);
 
 //合并：两个有序合并成一个有序
-
+bool Merge(SqList L1,SqList L2,SqList &L3){
+	if(L1.length+L2.length>L3.length)
+		return false;
+	int i=0,j=0,k=0;
+	while(i<L1.length && j<L2.length){
+		if(L1.data[i]<L2.data[j])
+			L3.data[k++]=L1.data[i++];
+		else
+			L3.data[k++]=L2.data[j++];
+	}
+	while(i<L1.length)
+		L3.data[k++]=L1.data[i++];
+	while(j<L2.length)
+		L3.data[k++]=L2.data[j++];
+	L3.length=k;
+	return true;
+}
 
