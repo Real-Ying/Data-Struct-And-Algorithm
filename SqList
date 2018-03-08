@@ -76,3 +76,22 @@ void Reserse(SqList &L){
 	L.data[L.length-1-i]=temp;    
 	}		
 }
+
+//区域交换：将A[m+n]中存放的两个顺序表位置交换
+void Reserse(SqList &A[];int left;int right;int ArrarySize){
+	ElemType temp;
+	if(left<0 || right>=ArrarySize || left>=right)    
+		return false;
+	int mid=(left+right)/2;         
+	for(int i=0;i<mid-left;i++){   
+		temp=A[left+i];             
+		A[left+i]=A[right-i];       
+		A[right-i]=temp;
+	}
+}
+Reserse(A,0,m+n-1,m+n);    //注意这道题是a1~am,b1~bn
+Reserse(A,0,n-1,n);
+Reserse(A,n,n+m-1,m);
+
+
+
