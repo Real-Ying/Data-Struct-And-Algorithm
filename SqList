@@ -124,14 +124,13 @@ bool Del_Same(SqList &L){
 }
 
 //删除区域[s,t]
-//思想(有序)：用两个空for找到大于等于s和小于t的两个位置i和j，从j到i依次往前覆盖
 bool Del_st_1(SqList &L,ElemType s,ElemType t){
 	if(L.length==0)
 		return false;
-	for(int i=0;i<L.length&&L.data[i]<s;i++);//寻找大于等于s的第一个元素(值等于或大于s时结束，此时值以>=s)
+	for(int i=0;i<L.length&&L.data[i]<s;i++);
     for(int i=0;i<L.length&&L.data[i]<s;i++);//寻找大于t的第一个元素
-    for(;j<L.length;i++,j++)    //覆盖填位，填位可能刚好和多余(这里解决了)，以及不足
+    for(;j<L.length;i++,j++)    
 		L.data[i]=L.data[j];
-	L.length=i;    //长度就是i的计数，若剩余元素不足填满区域，设置长度i删除了区域中多余部分
-	return true;
+    L.length=i;    
+    return true;
 }
