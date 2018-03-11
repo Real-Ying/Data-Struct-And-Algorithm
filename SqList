@@ -134,3 +134,16 @@ bool Del_st_1(SqList &L,ElemType s,ElemType t){
     L.length=i;    
     return true;
 }
+
+//思想(无序):与按值删除思想相同
+bool Del_st_2(SqList &L,ElemType s,ElemType t){
+	if(L.length==0 || s>=t)
+		return false;
+	for(int i=0;i<L.length;i++)
+		if(L.data[i]>=s && L.data[i]<=t)
+			k++;
+		else
+			L.data[i-k]=L.data[i];
+	L.length-=k;
+	return true;
+}
