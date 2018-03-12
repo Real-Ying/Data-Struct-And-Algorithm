@@ -6,9 +6,9 @@ typedef struct LNode(){
 //建立(头插法)
 LikeList CreatList1(LikeList &L){
 	LNode *s,x;
-	L=(LikeList)malloc(sizeof(LNode));    //创建头结点
-	L->nest=NULL;    //初始化为空
-	scanf("%d",&x);    //输入结点的值
+	L=(LikeList)malloc(sizeof(LNode));    
+	L->nest=NULL;    
+	scanf("%d",&x);    
 	while(x!=9999){
 		s=(LNode*)malloc(sizeof(LNode));    //创建新结点
 		
