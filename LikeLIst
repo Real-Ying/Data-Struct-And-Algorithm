@@ -12,8 +12,8 @@ LikeList CreatList1(LikeList &L){
 	while(x!=9999){
 		s=(LNode*)malloc(sizeof(LNode));    
 		
-		s->data=x;    //第一个键入值在循环外
-		s->next=L->next;    //遵循插入先后再前
+		s->data=x;   
+		s->next=L->next;    
 		L->next=s;
 		
 		scanf("%d",&x);
