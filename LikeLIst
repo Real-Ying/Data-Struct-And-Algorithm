@@ -10,7 +10,7 @@ LikeList CreatList1(LikeList &L){
 	L->nest=NULL;    
 	scanf("%d",&x);    
 	while(x!=9999){
-		s=(LNode*)malloc(sizeof(LNode));    //创建新结点
+		s=(LNode*)malloc(sizeof(LNode));    
 		
 		s->data=x;    //第一个键入值在循环外
 		s->next=L->next;    //遵循插入先后再前
