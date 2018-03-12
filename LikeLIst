@@ -4,7 +4,6 @@ typedef struct LNode(){
 }LNode,*LikeList;
 
 //建立
-//思想（头插法）：从创建头结点开始，生成新结点，将读取到的数据放到新结点的数据域中，然后将新结点插入到头结点之后，读取顺序与生成顺序相反
 LikeList CreatList1(LikeList &L){
 	LNode *s,x;
 	L=(LikeList)malloc(sizeof(LNode));    //创建头结点
