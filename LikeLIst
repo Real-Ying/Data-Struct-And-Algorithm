@@ -3,7 +3,7 @@ typedef struct LNode(){
 	struct LNode *next;
 }LNode,*LikeList;
 
-//建立
+//建立(头插法)
 LikeList CreatList1(LikeList &L){
 	LNode *s,x;
 	L=(LikeList)malloc(sizeof(LNode));    //创建头结点
