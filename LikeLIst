@@ -20,3 +20,22 @@ LikeList CreatList1(LikeList &L){
 	}
 	retirun L;
 }
+
+//建立(尾插法)
+LikeList CreatList2(LinkList &L){
+	int x;
+	L=(LikeList)malloc(sizeof(LNode));
+	LNode *s,*r=L;    //r为表尾指针，初始化指向L
+	scanf("%d",&x);
+	while(x!=9999){
+		s=(LNode*)malloc(sizeof(LNode));
+		
+		s->data=x;
+		r->next=s;
+		r=s;    //r指向新的表尾结点 ，两个都是指针*直接等
+		
+		scanf("%d",&x);
+	}
+	r->next=NULL;    //尾结点指针置空
+	return L;    //插入全走*r
+}
