@@ -36,6 +36,6 @@ LikeList CreatList2(LinkList &L){
 		
 		scanf("%d",&x);
 	}
-	r->next=NULL;    //尾结点指针置空
-	return L;    //插入全走*r
+	r->next=NULL;    
+	return L;    
 }
