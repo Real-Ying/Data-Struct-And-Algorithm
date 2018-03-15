@@ -52,3 +52,10 @@ LNode *GetElem(LinkList L,int i){
         p=p—>next；
         j++; }
     return p; }
+    
+//查找（按值返回位）
+LNode *GetLocate(LinkList L,ElemType e){
+    LNode *p=L—>Next；
+    while(p!=Null&&p—>data!=e){   
+        p=p—>Next;
+    return p; }
