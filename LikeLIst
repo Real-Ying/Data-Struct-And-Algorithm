@@ -39,3 +39,16 @@ LikeList CreatList2(LinkList &L){
 	r->next=NULL;    
 	return L;    
 }
+
+//查找（按位返回值）
+LNode *GetElem(LinkList L,int i){
+    int j=1;     
+    LNode *p=L—>Next;    
+    if(i==0)     
+        return L；
+    if(i<1)       
+        return Null;
+    while(p&&j<i){    
+        p=p—>next；
+        j++; }
+    return p; }
