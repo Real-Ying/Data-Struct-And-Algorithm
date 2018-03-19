@@ -67,8 +67,8 @@ LNode *GetLocate(LinkList L,ElemType e){
 3.p—>next=s;          
 
 //插入（前插）
-1.s—>next=p—>next;      //修改指针域，记住顺序不能颠倒
+1.s—>next=p—>next;     
 2.p—>next=s;
-3.temp=p->data;        //交换数据域
+3.temp=p->data;       
 4.p->data=s->data;
 5.s->data=temp;
