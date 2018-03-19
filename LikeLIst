@@ -59,3 +59,18 @@ LNode *GetLocate(LinkList L,ElemType e){
     while(p!=Null&&p—>data!=e){   
         p=p—>Next;
     return p; }
+    
+
+//插入（后插）
+1.p=GetElem(L,i-1);  
+2.s—>next=p—>next;    
+3.p—>next=s;          
+
+//插入（前插）
+//思想：这里是给了插入结点位置*s，假设该位置是前驱结点，然后在这个结点之后插入结点，最后交换这两个结点的数据
+
+1.s—>next=p—>next;      //修改指针域，记住顺序不能颠倒
+2.p—>next=s;
+3.temp=p->data;        //交换数据域
+4.p->data=s->data;
+5.s->data=temp;
