@@ -81,6 +81,6 @@ free(q);
 
 //删除（按位2）
 q=p->next;    
-p->data=p->nest->data;    //删除点与其后继交换数据
-p->next=q->next;    //q从链中断开(交换值后的后继结点)
+p->data=p->nest->data;    
+p->next=q->next;   
 free(q);
