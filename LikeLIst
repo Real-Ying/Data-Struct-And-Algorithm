@@ -74,9 +74,9 @@ LNode *GetLocate(LinkList L,ElemType e){
 5.s->data=temp;
 
 //删除（按位1）
-p=GetElem(L,i-1);   //查找删除位置前驱结点
-q=p->next;    //令q指向被删除结点
-p->next=q->next;    //令前驱结点指向删除结点的下一位，从而q从链中断开
+p=GetElem(L,i-1);   
+q=p->next;   
+p->next=q->next;    
 free(q);
 
 //删除（按位2）
