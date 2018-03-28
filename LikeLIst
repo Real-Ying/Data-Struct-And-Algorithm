@@ -88,13 +88,13 @@ free(q);
 //逆置(O(1))
 LinkList Reverse_1(LinkList &L){
     LNode *p,*r;       
-    p=L—>next;         //从头结点下一个结点开始
-    L—>next=NULL;      //先将头结点指针域置NULL
+    p=L—>next;         
+    L—>next=NULL;      
     while(p!=NULL){
-        r=p—>next;           // 暂存p的后继防止断链
-        p—>next=L—>next;    //以下循环头插，这里是插入后继
-        L—>next=p;          //插入前驱
-        p=r; }              //扫描下一个
+        r=p—>next;           
+        p—>next=L—>next;   
+        L—>next=p;          
+        p=r; }            
     return L; }
 	
 //逆置(O(1))
